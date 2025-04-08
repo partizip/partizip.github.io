@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nauka Niemieckiego</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/help-modal.css">
+  <link rel="stylesheet" href="./static/css/training.css">
+</head>
+<body>
+<div class="help-open" id="modal-open">
+  ?
+</div>
+<div class="back" onclick="window.location.replace('index.html')">
+  < Powrót
+</div>
+<div class="help" id="help-modal">
+  <div class="desc">
+    <div class="close" id="modal-close">
+    </div>
+    <p>To jest tryb treningu. W pierwszym polu wpisz tłumaczenie słowa z polskiego (podanego powyżej) na niemiecki a w drugim polu wpisz formę Partizip II.</p>
+    <p>Żeby zaliczyć trening musisz wpisać każde słowo prawidłowo DWA RAZY!</p>
+    <p>Na komputerze: poruszaj się przyciskiem TAB (kliknięcie go przeniesie kursor do nastepnego pola) Całość zatwierdzaj przyciskiem ENTER.</p>
+    <p>Jeśli chcesz wstawić znak specjalny kliknij w odpowiedni przycisk poniżej</p>
+
+    <p class="authors">Autorzy: <a href="https://github.com/sojusz" target="_blank">Sojusz</a> oraz <a href="https://github.com/OhFoxies" target="_blank">OhFoxies</a></p>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="container">
+    <p id="word"></p>
+    <div class="answer-container">
+      <label for="answerDe"></label><input type="text" id="answerDe" placeholder="Tłumaczenie">
+      <label for="answerPartizip"></label><input type="text" id="answerPartizip" placeholder="Partizip Perfekt">
+    </div>
+    <button id="submit" onclick="checkAnswer()">Sprawdź</button>
+    <p id="feedback"></p>
+    <p id="wordsLeft"></p>
+    <div class="special-chars">
+      <button onclick="addChar('ä', event)">ä</button>
+      <button onclick="addChar('ö', event)">ö</button>
+      <button onclick="addChar('ü', event)">ü</button>
+      <button onclick="addChar('ß', event)">ß</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="static/js/modal.js"></script>
+<script src="static/js/training.js"></script>
+</body>
+</html>
